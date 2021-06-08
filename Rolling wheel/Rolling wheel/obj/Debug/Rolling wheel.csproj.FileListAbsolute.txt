@@ -1,0 +1,10 @@
+D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\bin\Debug\Rolling wheel.exe.config
+D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\bin\Debug\Rolling wheel.exe
+D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\bin\Debug\Rolling wheel.pdb
+D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.csproj.AssemblyReference.cache
+D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\obj\Debug\Rolling_wheel.Form1.resources
+D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\obj\Debug\Rolling_wheel.Properties.Resources.resources
+D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.csproj.GenerateResource.cache
+D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.csproj.CoreCompileInputs.cache
+D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.exe
+D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.pdb
