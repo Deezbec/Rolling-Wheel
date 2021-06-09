@@ -8,3 +8,23 @@ D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\obj\Debug\Rolling whe
 D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.csproj.CoreCompileInputs.cache
 D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.exe
 D:\User\!Kirill\Study\!project\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.pdb
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling-Wheel-main\Rolling wheel\Rolling wheel\bin\Debug\Rolling wheel.exe.config
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling-Wheel-main\Rolling wheel\Rolling wheel\bin\Debug\Rolling wheel.exe
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling-Wheel-main\Rolling wheel\Rolling wheel\bin\Debug\Rolling wheel.pdb
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling-Wheel-main\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.csproj.AssemblyReference.cache
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling-Wheel-main\Rolling wheel\Rolling wheel\obj\Debug\Rolling_wheel.Form1.resources
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling-Wheel-main\Rolling wheel\Rolling wheel\obj\Debug\Rolling_wheel.Properties.Resources.resources
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling-Wheel-main\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.csproj.GenerateResource.cache
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling-Wheel-main\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.csproj.CoreCompileInputs.cache
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling-Wheel-main\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.exe
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling-Wheel-main\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.pdb
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\bin\Debug\Rolling wheel.exe.config
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\bin\Debug\Rolling wheel.exe
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\bin\Debug\Rolling wheel.pdb
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.csproj.AssemblyReference.cache
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\obj\Debug\Rolling_wheel.Form1.resources
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\obj\Debug\Rolling_wheel.Properties.Resources.resources
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.csproj.GenerateResource.cache
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.csproj.CoreCompileInputs.cache
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.exe
+d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.pdb

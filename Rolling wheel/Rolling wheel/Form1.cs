@@ -16,7 +16,7 @@ namespace Rolling_wheel
         int TrashSlash = 2; // временный переключатель заданий
         List<Dot> Dots = new List<Dot>(); // Список искомых точек
         Circle main; //Главный круг
-        Dot dot; // Просто точа
+        Dot dot, dotNew; // Просто точа
         Circle deSecond; // Второй круг, используется в задании б и, может, г
         public Form1() //Не мое, ни в чем не виноват 
         {
@@ -29,6 +29,8 @@ namespace Rolling_wheel
             {
                 main = new Circle(0, 100, 25);
                 dot = new Dot(main.GetSetX, main.GetSetY + main.GetSetR * main.GetSetLyambda); //Создание точки на основе данных первого круга
+                deSecond = new Circle(0 - main.GetSetR, main.GetSetY, main.GetSetR);
+                dotNew = new Dot(main.GetSetX, main.GetSetY + main.GetSetR * main.GetSetLyambda);
                 LyambdaBox.Text = Convert.ToString(main.GetSetLyambda); // ↓
                 fiBox.Text = Convert.ToString(main.GetSetFiDelta);      // Подготовка текстовых окон
             }
@@ -52,11 +54,21 @@ namespace Rolling_wheel
         {
             if (TrashSlash == 0)   // Код варианта а, вскоре будет переключатель
             {
+                if (main.GetSetX - main.GetSetR == Width) main.GetSetX = main.GetSetR;
                 dot.GetSetX = main.GetSetX + main.GetSetR * (float)Math.Sin(Math.PI * main.GetSetFi / 180) * main.GetSetLyambda; //↓
                 dot.GetSetY = main.GetSetY + main.GetSetR * (float)Math.Cos(Math.PI * main.GetSetFi / 180) * main.GetSetLyambda; //Координаты искомой точки
                 main.Draw(e.Graphics, Color.Black); //Рисование главного крга
                 dot.Draw(e.Graphics, Color.Red, main); //Мой лень слишком большой чтобы писать комментарии дальше
+                if (main.GetSetX + main.GetSetR >= Width && main.GetSetX - main.GetSetR < Width)
+                {
+                    deSecond.GetSetX = main.GetSetX - Width;
+                    dotNew.GetSetX = dot.GetSetX - Width;
+                    dotNew.GetSetY = dot.GetSetY;
+                    deSecond.Draw(e.Graphics, Color.Black);
+                    dotNew.Draw(e.Graphics, Color.Red, deSecond);
+                }
                 for (int i = 0; i < Dots.Count; i++) Dots[i].Draw(e.Graphics, Color.Green);
+
             }
             if (TrashSlash == 1 || TrashSlash == 2)   // Код варианта б
             {
@@ -90,6 +102,7 @@ namespace Rolling_wheel
             {
                 main.GetSetFi -= 180 / (main.GetSetR * (float)Math.PI) * main.GetSetFiDelta; // Изменение угла поворота
                 main.GetSetX++;
+                if (main.GetSetX + main.GetSetR >= Width) { deSecond.GetSetX++; Dots.Add(new Dot(dotNew.GetSetX, dotNew.GetSetY)); }
             }
             if (TrashSlash == 1 || TrashSlash == 2)  // Код варианта б и в
             {
