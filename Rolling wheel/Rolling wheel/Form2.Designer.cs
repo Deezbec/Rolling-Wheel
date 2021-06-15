@@ -201,9 +201,10 @@ namespace Rolling_wheel
             this.Controls.Add(this.trackBar2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.trackBar1);
-            this.Location = new System.Drawing.Point(1000, 0);
+            this.Location = new System.Drawing.Point(940, 340);
             this.Name = "Form2";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
