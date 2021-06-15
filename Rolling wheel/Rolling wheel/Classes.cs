@@ -32,14 +32,14 @@ namespace Rolling_wheel
             g.FillRectangle(new SolidBrush(color), x, y, 1, 1);
         }
     }
-    class Circle
+    class Circle 
     {
-        float R;
+        int R;
         float x;
         float y;
         public float GetSetX { get { return x; }  set { x = value; } }
         public float GetSetY { get { return y; } set { y = value; } }
-        public float GetSetR { get { return R; } set { R = value; } }
+        public int GetSetR { get { return R; } set { R = value; } }
         //Shit stuff is under that statement 
         float lyambda;
         float fi;
@@ -47,7 +47,7 @@ namespace Rolling_wheel
         public float GetSetLyambda { get { return lyambda; } set { lyambda = value; } }
         public float GetSetFi { get { return fi; } set { fi = value; } }
         public float GetSetFiDelta { get { return fidelta; } set { fidelta = value; } }
-        public Circle(float x, float y, float R) //Собсна конструктор (fi и lyam задаются ПУ)
+        public Circle(float x, float y, int R) //Собсна конструктор (fi и lyam задаются ПУ)
         {
             this.x = x;
             this.y = y;
@@ -76,4 +76,28 @@ namespace Rolling_wheel
             }
         }
     }
-}
+
+    public class SettingsEventArgs : EventArgs
+    {
+        public int r1 { get; set; }
+        public SettingsEventArgs(int r1)
+        {
+            this.r1 = r1;
+        }
+    }
+
+    public delegate void SettingsChangedEventHandler(object Sender, SettingsEventArgs e);
+    public partial class Smth : Form
+    {
+        public event SettingsChangedEventHandler SettingsChanged;
+        public Smth()
+        {
+            //InitializeComponent();
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            //if (this.SettingsChanged != null) this.SettingsChanged(this, new SettingsEventArgs(Convert.ToInt32(trackBar1.Value.ToString())));
+        }
+    }
+}  

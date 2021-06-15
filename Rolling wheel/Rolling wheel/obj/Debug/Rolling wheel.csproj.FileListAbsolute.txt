@@ -28,3 +28,4 @@ d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\obj\Debug\Rolli
 d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.csproj.CoreCompileInputs.cache
 d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.exe
 d:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\obj\Debug\Rolling wheel.pdb
+D:\User\!Kirill\Github\Rolling-Wheel\Rolling wheel\Rolling wheel\obj\Debug\Rolling_wheel.Form2.resources
