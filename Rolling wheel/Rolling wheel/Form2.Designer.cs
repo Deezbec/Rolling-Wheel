@@ -41,6 +41,7 @@ namespace Rolling_wheel
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
@@ -88,6 +89,8 @@ namespace Rolling_wheel
             this.label2.Size = new System.Drawing.Size(52, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "DelatFi";
+            this.label2.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.label2.MouseHover += new System.EventHandler(this.label1_MouseHover);
             // 
             // trackBar3
             // 
@@ -108,6 +111,8 @@ namespace Rolling_wheel
             this.label3.Size = new System.Drawing.Size(63, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Distance";
+            this.label3.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.label3.MouseHover += new System.EventHandler(this.label1_MouseHover);
             // 
             // label4
             // 
@@ -117,6 +122,8 @@ namespace Rolling_wheel
             this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 8;
             this.label4.Text = "Rad 2";
+            this.label4.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.label4.MouseHover += new System.EventHandler(this.label1_MouseHover);
             // 
             // trackBar4
             // 
@@ -165,11 +172,23 @@ namespace Rolling_wheel
             this.label8.TabIndex = 13;
             this.label8.Text = "0";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label9.Location = new System.Drawing.Point(1, 189);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 17);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Nothing";
+            this.label9.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 243);
+            this.ClientSize = new System.Drawing.Size(557, 188);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -210,5 +229,6 @@ namespace Rolling_wheel
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

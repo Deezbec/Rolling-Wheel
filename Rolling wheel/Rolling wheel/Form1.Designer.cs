@@ -36,6 +36,7 @@ namespace Rolling_wheel
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.taskMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.task1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.task2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.task3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +44,6 @@ namespace Rolling_wheel
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.taskMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,7 @@ namespace Rolling_wheel
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
@@ -69,21 +70,21 @@ namespace Rolling_wheel
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // startToolStripMenuItem
             // 
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-            this.startToolStripMenuItem.Size = new System.Drawing.Size(54, 26);
+            this.startToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
             this.startToolStripMenuItem.Text = "Start";
             this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(57, 26);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
@@ -98,24 +99,31 @@ namespace Rolling_wheel
             this.changeToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
             this.changeToolStripMenuItem.Text = "Change task";
             // 
+            // taskMenuToolStripMenuItem
+            // 
+            this.taskMenuToolStripMenuItem.Name = "taskMenuToolStripMenuItem";
+            this.taskMenuToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.taskMenuToolStripMenuItem.Text = "Task Menu";
+            this.taskMenuToolStripMenuItem.Click += new System.EventHandler(this.taskMenuToolStripMenuItem_Click);
+            // 
             // task1ToolStripMenuItem
             // 
             this.task1ToolStripMenuItem.Name = "task1ToolStripMenuItem";
-            this.task1ToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
+            this.task1ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.task1ToolStripMenuItem.Text = "Task 1";
             this.task1ToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
             // 
             // task2ToolStripMenuItem
             // 
             this.task2ToolStripMenuItem.Name = "task2ToolStripMenuItem";
-            this.task2ToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
+            this.task2ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.task2ToolStripMenuItem.Text = "Task 2";
             this.task2ToolStripMenuItem.Click += new System.EventHandler(this.button2_Click);
             // 
             // task3ToolStripMenuItem
             // 
             this.task3ToolStripMenuItem.Name = "task3ToolStripMenuItem";
-            this.task3ToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
+            this.task3ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.task3ToolStripMenuItem.Text = "Task 3";
             this.task3ToolStripMenuItem.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -166,17 +174,11 @@ namespace Rolling_wheel
             this.label1.Text = "Nothing";
             this.label1.Visible = false;
             // 
-            // taskMenuToolStripMenuItem
-            // 
-            this.taskMenuToolStripMenuItem.Name = "taskMenuToolStripMenuItem";
-            this.taskMenuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.taskMenuToolStripMenuItem.Text = "Task Menu";
-            this.taskMenuToolStripMenuItem.Click += new System.EventHandler(this.taskMenuToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(632, 308);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);

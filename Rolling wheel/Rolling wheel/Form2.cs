@@ -40,9 +40,9 @@ namespace Rolling_wheel
                 label4.Visible = false;
                 trackBar4.Visible = false;
                 label8.Visible = false;
-                Height = 200;
+                Height = 150;
+                label9.Location = new Point(0, 115);
                 trackBar2.Value = (int)main.GetSetFiDelta;
-               // trackBar3.Value = (int)main.GetSetLyambda;
                 trackBar3.Value = 1;
             }
             else
@@ -103,12 +103,33 @@ namespace Rolling_wheel
 
         private void label1_MouseHover(object sender, EventArgs e)
         {
-
+            if (sender.Equals(label1)) { label9.Text = @"
+            Радиус первого круга. для первого задания - единственный                        
+            круг на экране, для оставшихся двух это круг, по которому
+            совершается движение
+ "; Height = (TrashSlash == 0) ? 210 : 250; }
+            if (sender.Equals(label2)) { label9.Text = @"
+            Угол, на который поворачивается круг каждый тик таймера,                        
+            кстати, интервал между тиками - 1 миллисекунда
+            
+ "; Height = (TrashSlash == 0) ? 200 : 240; }
+            if (sender.Equals(label3)) { label9.Text = @"
+            Расстояние между ""рисующим концом"" и центром движущейся                        
+            окружности
+ "; Height = (TrashSlash == 0) ? 200 : 240; }
+            if (sender.Equals(label4)) { label9.Text = @"
+            Радиус второго круга. У первого задания такого нет,
+            для второго и третьего задания это круг, который
+            совершает движение
+ "; Height = (TrashSlash == 0) ? 210 : 250; }
+            label9.Visible = true;
         }
 
         private void label1_MouseLeave(object sender, EventArgs e)
         {
-
+            if (TrashSlash == 0) Height = 160;
+            else Height = 200;
+            label9.Visible = false;
         }
     }
 
