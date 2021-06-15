@@ -32,7 +32,7 @@ namespace Rolling_wheel
             g.FillRectangle(new SolidBrush(color), x, y, 1, 1);
         }
     }
-    class Circle 
+    public class Circle 
     {
         int R;
         float x;
@@ -40,7 +40,6 @@ namespace Rolling_wheel
         public float GetSetX { get { return x; }  set { x = value; } }
         public float GetSetY { get { return y; } set { y = value; } }
         public int GetSetR { get { return R; } set { R = value; } }
-        //Shit stuff is under that statement 
         float lyambda;
         float fi;
         float fidelta;
@@ -60,44 +59,6 @@ namespace Rolling_wheel
         {
             SolidBrush brush = new SolidBrush(color);
             g.FillEllipse(brush, x - R, y - R, 2 * R, 2 * R);
-        }
-        public void InputCheck(TextBox Box, string s) //Функция для работы TextBox-ов
-        {
-            bool flag = false;
-            if (Box.TextLength != 0)
-            {
-                for (int i = 0; i < Box.TextLength; i++) if ((Convert.ToInt32(Box.Text[i]) >= 48 && Box.Text[i] <= 57) || Box.Text[i] == 44 || Box.Text[i] == 45) flag = true; else { flag = false; break; }
-                if (Box.TextLength == 1 && Box.Text == "-") flag = false;
-            }
-            if (flag)
-            {
-                if (s == "l") this.lyambda = Convert.ToSingle(Box.Text);
-                if (s == "f") this.fidelta = Convert.ToSingle(Box.Text);
-            }
-        }
-    }
-
-    public class SettingsEventArgs : EventArgs
-    {
-        public int r1 { get; set; }
-        public SettingsEventArgs(int r1)
-        {
-            this.r1 = r1;
-        }
-    }
-
-    public delegate void SettingsChangedEventHandler(object Sender, SettingsEventArgs e);
-    public partial class Smth : Form
-    {
-        public event SettingsChangedEventHandler SettingsChanged;
-        public Smth()
-        {
-            //InitializeComponent();
-        }
-
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-            //if (this.SettingsChanged != null) this.SettingsChanged(this, new SettingsEventArgs(Convert.ToInt32(trackBar1.Value.ToString())));
         }
     }
 }  

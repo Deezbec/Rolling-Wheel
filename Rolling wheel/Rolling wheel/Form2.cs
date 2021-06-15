@@ -10,40 +10,127 @@ using System.Windows.Forms;
 
 namespace Rolling_wheel
 {
+    public delegate void Rad1Change(object sender, Rad1EventArgs e);
+    public delegate void FiChange(object sender, FiEventArgs e);
+    public delegate void DistChange(object sender, DistEventArgs e);
+    public delegate void Rad2Change(object sender, Rad2EventArgs e);
+
     public partial class Form2 : Form
     {
-        public event SetsChange eventus;
-        /*int r1;
-        public int GetR1 { get { return r1; } }*/
-        public Form2()
+        public event Rad1Change Rad1Change;
+        public event FiChange FiChange;
+        public event DistChange DistChange;
+        public event Rad2Change Rad2Change;
+        public Form2(Circle main, Circle DeSecond, int TrashSlash)
         {
             InitializeComponent();
+            this.main = main;
+            this.DeSecond = DeSecond;
+            this.TrashSlash = TrashSlash;
         }
+        Circle main, DeSecond;
+        int TrashSlash;
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            /*r1 = 10;*/
+            int k;
+            trackBar1.Value = main.GetSetR;
+            if (TrashSlash == 0)
+            {
+                label4.Visible = false;
+                trackBar4.Visible = false;
+                label8.Visible = false;
+                Height = 200;
+                trackBar2.Value = (int)main.GetSetFiDelta;
+               // trackBar3.Value = (int)main.GetSetLyambda;
+                trackBar3.Value = 1;
+            }
+            else
+            {
+                trackBar2.Value = (int)DeSecond.GetSetFiDelta;
+                trackBar3.Value = (int)DeSecond.GetSetLyambda;
+                trackBar4.Value = DeSecond.GetSetR;
+                k = label4.Location.Y;
+                label8.Text = Convert.ToString(trackBar4.Value);
+                if (TrashSlash == 2) { trackBar1.Minimum = trackBar4.Value; trackBar4.Maximum = trackBar1.Value; }
+            }
+            label5.Text = Convert.ToString(trackBar1.Value);
+            label6.Text = Convert.ToString(trackBar2.Value);
+            label7.Text = Convert.ToString(trackBar3.Value);
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            int i = Convert.ToInt32(Rad1TrackBar.Value);
-            if (eventus != null)
+            label5.Text = Convert.ToString(trackBar1.Value);
+            int i = Convert.ToInt32(trackBar1.Value);
+            if (Rad1Change != null)
             {
-                eventus(this, new RadiusEventArgs(i));
+                Rad1Change(this, new Rad1EventArgs(i));
             }
-            /*r1 = Convert.ToInt32(Rad1TrackBar.Value);*/
+            if (TrashSlash == 2) trackBar4.Maximum = trackBar1.Value;
+        }
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+            label6.Text = Convert.ToString(trackBar2.Value);
+            int i = Convert.ToInt32(trackBar2.Value);
+            if (FiChange != null)
+            {
+                FiChange(this, new FiEventArgs(i));
+            }
+        }
+
+        private void trackBar3_Scroll(object sender, EventArgs e)
+        {
+            label7.Text = Convert.ToString(trackBar3.Value);
+            int i = Convert.ToInt32(trackBar3.Value);
+            if (DistChange != null)
+            {
+                DistChange(this, new DistEventArgs(i));
+            }
+        }
+
+        private void trackBar4_Scroll(object sender, EventArgs e)
+        {
+            label8.Text = Convert.ToString(trackBar4.Value);
+            int i = Convert.ToInt32(trackBar4.Value);
+            if (TrashSlash == 2) trackBar1.Minimum = trackBar4.Value;
+            if (Rad2Change != null)
+            {
+                Rad2Change(this, new Rad2EventArgs(i));
+            }
+        }
+
+        private void label1_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+
         }
     }
 
-    public delegate void SetsChange(object sender, RadiusEventArgs e);
 
-    public class RadiusEventArgs: EventArgs
+    public class Rad1EventArgs : EventArgs
     {
         public int Radius_Change { set; get; }
-        public RadiusEventArgs(int R)
-        {
-            Radius_Change = R;
-        }
+        public Rad1EventArgs(int R) { Radius_Change = R; }
+    }
+    public class FiEventArgs : EventArgs
+    {
+        public int Fi_Change { set; get; }
+        public FiEventArgs(int R) { Fi_Change = R; }
+    }
+    public class Rad2EventArgs : EventArgs
+    {
+        public int Rad2_Change { set; get; }
+        public Rad2EventArgs(int R) { Rad2_Change = R; }
+    }
+    public class DistEventArgs : EventArgs
+    {
+        public int Dist_Change { set; get; }
+        public DistEventArgs(int R) { Dist_Change = R; }
     }
 }
