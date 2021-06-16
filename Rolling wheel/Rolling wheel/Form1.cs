@@ -39,8 +39,8 @@ namespace Rolling_wheel
         }
         void SecOrThirCase()
         {
-            if (TrashSlash == 1) main = new Circle(250, 150, 50); else main = new Circle(250, 150, 30);
-            deSecond = new Circle(main.GetSetX, main.GetSetY + main.GetSetR * main.GetSetLyambda + 15, 15); // Создание второстепенного круга на основе первого
+            if (TrashSlash == 1) { main = new Circle(250, 150, 60); deSecond = new Circle(main.GetSetX, main.GetSetY + main.GetSetR * main.GetSetLyambda + 15, 15); }
+            else {                 main = new Circle(250, 150, 45); deSecond = new Circle(main.GetSetX, main.GetSetY + main.GetSetR * main.GetSetLyambda + 15, 15); }
             dot = new Dot(deSecond.GetSetX, deSecond.GetSetY + deSecond.GetSetR * deSecond.GetSetLyambda); // Создание точки на основе данных второго круга
             if (TrashSlash == 1) main.GetSetLyambda = 1 + (double)deSecond.GetSetR / (double)main.GetSetR; else main.GetSetLyambda = 1 - (double)deSecond.GetSetR / (double)main.GetSetR;
         }
@@ -234,15 +234,16 @@ namespace Rolling_wheel
             if (TrashSlash == 0)  // Код варианта а, вскоре будет переключатель
             {
                 main.GetSetFi -= 180 / (main.GetSetR * (double)Math.PI) * main.GetSetFiDelta * (double)1.05; // Изменение угла поворота
-                //main.GetSetFi -= (2 * main.GetSetR * (double)Math.PI) * main.GetSetFiDelta ?;
+                //main.GetSetFi -= (2 * main.GetSetR * (double)Math.PI) * main.GetSetFiDelta 
                 main.GetSetX++;
                 if (main.GetSetX + main.GetSetR >= Width) { deSecond.GetSetX++; Dots.Add(new Dot(dotNew.GetSetX, dotNew.GetSetY)); }
             }
             if (TrashSlash == 1 || TrashSlash == 2)  // Код варианта б и в
             {
-                main.GetSetFi += 180 / (main.GetSetR * (double)Math.PI) * main.GetSetFiDelta * (double)1.05; // Изменение угла поворота для главного круга
-                if (TrashSlash == 1) deSecond.GetSetFi += 180 / (deSecond.GetSetR * (double)Math.PI) * deSecond.GetSetFiDelta * (double)1.05;
-                else     deSecond.GetSetFi -= 180 / (deSecond.GetSetR * (double)Math.PI) * deSecond.GetSetFiDelta * (double)1.05; // Изменение угла поворота для второстепенного круга
+                main.GetSetFi += 180 / (main.GetSetR * (double)Math.PI) * (double)1.05; // Изменение угла поворота для главного круга
+                if (TrashSlash == 1) deSecond.GetSetFi += (180 / (deSecond.GetSetR * (double)Math.PI) * (double)1.05) + 180 / (main.GetSetR * (double)Math.PI) * (double)1.05;
+                else     deSecond.GetSetFi -= ( 180 / (deSecond.GetSetR * (double)Math.PI) * (double)1.05 - 180 / (main.GetSetR * (double)Math.PI) * (double)1.05); // Изменение угла поворота для второстепенного круга
+
             }
             Dots.Add(new Dot(dot.GetSetX, dot.GetSetY)); //Добавление искомых точек в список искомых точек 
             Refresh();

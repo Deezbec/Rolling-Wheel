@@ -72,30 +72,32 @@ namespace Rolling_wheel
             // 
             // trackBar2
             // 
-            this.trackBar2.Location = new System.Drawing.Point(95, 57);
+            this.trackBar2.Location = new System.Drawing.Point(95, 143);
             this.trackBar2.Maximum = 15;
             this.trackBar2.Minimum = 1;
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.Size = new System.Drawing.Size(406, 48);
             this.trackBar2.TabIndex = 3;
             this.trackBar2.Value = 1;
+            this.trackBar2.Visible = false;
             this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 57);
+            this.label2.Location = new System.Drawing.Point(33, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "DelatFi";
+            this.label2.Visible = false;
             this.label2.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             this.label2.MouseHover += new System.EventHandler(this.label1_MouseHover);
             // 
             // trackBar3
             // 
-            this.trackBar3.Location = new System.Drawing.Point(95, 101);
-            this.trackBar3.Maximum = 5;
+            this.trackBar3.Location = new System.Drawing.Point(95, 57);
+            this.trackBar3.Maximum = 500;
             this.trackBar3.Minimum = 1;
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.Size = new System.Drawing.Size(406, 48);
@@ -106,7 +108,7 @@ namespace Rolling_wheel
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 101);
+            this.label3.Location = new System.Drawing.Point(33, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 17);
             this.label3.TabIndex = 7;
@@ -117,7 +119,7 @@ namespace Rolling_wheel
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 143);
+            this.label4.Location = new System.Drawing.Point(33, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 8;
@@ -127,7 +129,7 @@ namespace Rolling_wheel
             // 
             // trackBar4
             // 
-            this.trackBar4.Location = new System.Drawing.Point(95, 143);
+            this.trackBar4.Location = new System.Drawing.Point(95, 101);
             this.trackBar4.Maximum = 60;
             this.trackBar4.Minimum = 1;
             this.trackBar4.Name = "trackBar4";
@@ -148,16 +150,17 @@ namespace Rolling_wheel
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(507, 57);
+            this.label6.Location = new System.Drawing.Point(507, 143);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(16, 17);
             this.label6.TabIndex = 11;
             this.label6.Text = "0";
+            this.label6.Visible = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(507, 101);
+            this.label7.Location = new System.Drawing.Point(507, 57);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(16, 17);
             this.label7.TabIndex = 12;
@@ -166,7 +169,7 @@ namespace Rolling_wheel
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(507, 143);
+            this.label8.Location = new System.Drawing.Point(507, 101);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(16, 17);
             this.label8.TabIndex = 13;
@@ -176,7 +179,7 @@ namespace Rolling_wheel
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label9.Location = new System.Drawing.Point(1, 189);
+            this.label9.Location = new System.Drawing.Point(1, 143);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 17);
             this.label9.TabIndex = 14;
@@ -187,7 +190,7 @@ namespace Rolling_wheel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 188);
+            this.ClientSize = new System.Drawing.Size(557, 293);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);

@@ -35,28 +35,30 @@ namespace Rolling_wheel
         {
             int k;
             trackBar1.Value = main.GetSetR;
+            
             if (TrashSlash == 0)
             {
                 label4.Visible = false;
                 trackBar4.Visible = false;
                 label8.Visible = false;
-                Height = 150;
-                label9.Location = new Point(0, 115);
+                Height = 120;
+                label9.Location = new Point(0, 80);
                 trackBar2.Value = (int)main.GetSetFiDelta;
-                trackBar3.Value = 1;
+                trackBar3.Value = 100;
             }
             else
             {
                 trackBar2.Value = (int)DeSecond.GetSetFiDelta;
-                trackBar3.Value = (int)DeSecond.GetSetLyambda;
+                trackBar3.Value = 100;
                 trackBar4.Value = DeSecond.GetSetR;
                 k = label4.Location.Y;
                 label8.Text = Convert.ToString(trackBar4.Value);
                 if (TrashSlash == 2) { trackBar1.Minimum = trackBar4.Value; trackBar4.Maximum = trackBar1.Value; }
+                Height = 150;
             }
             label5.Text = Convert.ToString(trackBar1.Value);
             label6.Text = Convert.ToString(trackBar2.Value);
-            label7.Text = Convert.ToString(trackBar3.Value);
+            label7.Text = Convert.ToString(trackBar3.Value / 100);
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
@@ -82,8 +84,8 @@ namespace Rolling_wheel
 
         private void trackBar3_Scroll(object sender, EventArgs e)
         {
-            label7.Text = Convert.ToString(trackBar3.Value);
-            int i = Convert.ToInt32(trackBar3.Value);
+            label7.Text = Convert.ToString(Convert.ToDouble(trackBar3.Value) / 100);
+            double i = Convert.ToDouble(trackBar3.Value) / 100;
             if (DistChange != null)
             {
                 DistChange(this, new DistEventArgs(i));
@@ -107,29 +109,29 @@ namespace Rolling_wheel
             Радиус первого круга. для первого задания - единственный                        
             круг на экране, для оставшихся двух это круг, по которому
             совершается движение. За единицу взят пиксель.
- "; Height = (TrashSlash == 0) ? 210 : 250; }
+ "; Height = (TrashSlash == 0) ? 180 : 210; }
             if (sender.Equals(label2)) { label9.Text = @"
             Угол, на который поворачивается круг каждый тик таймера.                        
             За единицу взят угол, который проходит круг, перемещаясь
             на 1 пиксель.
             
- "; Height = (TrashSlash == 0) ? 210 : 250; }
+ "; Height = (TrashSlash == 0) ? 180 : 210; }
             if (sender.Equals(label3)) { label9.Text = @"
             Расстояние между ""рисующим концом"" и центром движущейся                        
             окружности. За единицу взят радиус движущейся окружности
- "; Height = (TrashSlash == 0) ? 200 : 240; }
+ "; Height = (TrashSlash == 0) ? 165 : 200; }
             if (sender.Equals(label4)) { label9.Text = @"
             Радиус второго круга. У первого задания такого нет,                                      
             для второго и третьего задания это круг, который                                        
             совершает движение. За единицу взят пиксель.                                                                          
- "; Height = (TrashSlash == 0) ? 210 : 250; }
+ "; Height = (TrashSlash == 0) ? 180 : 210; }
             label9.Visible = true;
         }
 
         private void label1_MouseLeave(object sender, EventArgs e)
         {
-            if (TrashSlash == 0) Height = 160;
-            else Height = 180;
+            if (TrashSlash == 0) Height = 120;
+            else Height = 150;
             label9.Visible = false;
         }
     }
@@ -152,7 +154,7 @@ namespace Rolling_wheel
     }
     public class DistEventArgs : EventArgs
     {
-        public int Dist_Change { set; get; }
-        public DistEventArgs(int R) { Dist_Change = R; }
+        public double Dist_Change { set; get; }
+        public DistEventArgs(double R) { Dist_Change = R; }
     }
 }
