@@ -217,6 +217,8 @@ namespace Rolling_wheel
 
         private void taskMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Timer.Stop();
+            if (Sets != null) Sets.Close();
             TrashSlash = -1;
             menuStrip1.Visible = false;
             Height = 150;

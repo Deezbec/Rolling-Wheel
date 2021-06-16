@@ -107,28 +107,28 @@ namespace Rolling_wheel
             Радиус первого круга. для первого задания - единственный                        
             круг на экране, для оставшихся двух это круг, по которому
             совершается движение
- "; Height = (TrashSlash == 0) ? 210 : 250; }
+ "; Height = (TrashSlash == 0) ? 210 : 240; }
             if (sender.Equals(label2)) { label9.Text = @"
             Угол, на который поворачивается круг каждый тик таймера,                        
             кстати, интервал между тиками - 1 миллисекунда
             
- "; Height = (TrashSlash == 0) ? 200 : 240; }
+ "; Height = (TrashSlash == 0) ? 200 : 230; }
             if (sender.Equals(label3)) { label9.Text = @"
             Расстояние между ""рисующим концом"" и центром движущейся                        
             окружности
- "; Height = (TrashSlash == 0) ? 200 : 240; }
+ "; Height = (TrashSlash == 0) ? 200 : 230; }
             if (sender.Equals(label4)) { label9.Text = @"
             Радиус второго круга. У первого задания такого нет,                                      
             для второго и третьего задания это круг, который                                        
             совершает движение                                                                          
- "; Height = (TrashSlash == 0) ? 210 : 250; }
+ "; Height = (TrashSlash == 0) ? 210 : 240; }
             label9.Visible = true;
         }
 
         private void label1_MouseLeave(object sender, EventArgs e)
         {
             if (TrashSlash == 0) Height = 160;
-            else Height = 200;
+            else Height = 180;
             label9.Visible = false;
         }
     }
