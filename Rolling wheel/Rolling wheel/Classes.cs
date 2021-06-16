@@ -12,11 +12,11 @@ namespace Rolling_wheel
 {
     class Dot
     {
-        float x;
-        float y;
-        public float GetSetX { get { return x; } set { x = value; } }
-        public float GetSetY { get { return y; } set { y = value; } }
-        public Dot(float x, float y) //Собсна конструктор 
+        double x;
+        double y;
+        public double GetSetX { get { return x; } set { x = value; } }
+        public double GetSetY { get { return y; } set { y = value; } }
+        public Dot(double x, double y) //Собсна конструктор 
         {
             this.x = x;
             this.y = y;
@@ -24,29 +24,29 @@ namespace Rolling_wheel
         public void Draw(Graphics g, Color color, Circle main) //рисование линии от точки до центра заданное окружности 
         {
             SolidBrush brush = new SolidBrush(color);
-            g.DrawLine(new Pen(color), x, y, main.GetSetX, main.GetSetY);
+            g.DrawLine(new Pen(color), (float)x, (float)y, (float)main.GetSetX, (float)main.GetSetY);
         }
         public void Draw(Graphics g, Color color) //рисование точки 
         {
             SolidBrush brush = new SolidBrush(color);
-            g.FillRectangle(new SolidBrush(color), x, y, 1, 1);
+            g.FillRectangle(new SolidBrush(color), (float)x, (float)y, 1, 1);
         }
     }
     public class Circle 
     {
         int R;
-        float x;
-        float y;
-        public float GetSetX { get { return x; }  set { x = value; } }
-        public float GetSetY { get { return y; } set { y = value; } }
+        double x;
+        double y;
+        public double GetSetX { get { return x; }  set { x = value; } }
+        public double GetSetY { get { return y; } set { y = value; } }
         public int GetSetR { get { return R; } set { R = value; } }
-        float lyambda;
-        float fi;
-        float fidelta;
-        public float GetSetLyambda { get { return lyambda; } set { lyambda = value; } }
-        public float GetSetFi { get { return fi; } set { fi = value; } }
-        public float GetSetFiDelta { get { return fidelta; } set { fidelta = value; } }
-        public Circle(float x, float y, int R) //Собсна конструктор (fi и lyam задаются ПУ)
+        double lyambda;
+        double fi;
+        double fidelta;
+        public double GetSetLyambda { get { return lyambda; } set { lyambda = value; } }
+        public double GetSetFi { get { return fi; } set { fi = value; } }
+        public double GetSetFiDelta { get { return fidelta; } set { fidelta = value; } }
+        public Circle(double x, double y, int R) //Собсна конструктор (fi и lyam задаются ПУ)
         {
             this.x = x;
             this.y = y;
@@ -58,7 +58,7 @@ namespace Rolling_wheel
         public void Draw(Graphics g, Color color) //рисование окружности 
         {
             SolidBrush brush = new SolidBrush(color);
-            g.FillEllipse(brush, x - R, y - R, 2 * R, 2 * R);
+            g.FillEllipse(brush, (float)x - (float)R, (float)y - (float)R, (float)2 * (float)R, (float)2 * (float)R);
         }
     }
 }  
