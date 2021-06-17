@@ -71,7 +71,7 @@ namespace Rolling_wheel
                     dotNew.Draw(e.Graphics, Color.Red, deSecond);
                 }
                 for (int i = 0; i < Dots.Count; i++) Dots[i].Draw(e.Graphics, Color.Green);
-                //e.Graphics.DrawLine(new Pen(Color.Gold) , main.GetSetR + distToMain, main.GetSetR * 2 + distToMain, main.GetSetR + 2 * (int)Math.PI * main.GetSetR + distToMain, main.GetSetR * 2 + distToMain);
+                //e.Graphics.DrawLine(new Pen(Color.Gold), main.GetSetR, main.GetSetR * 2 + distToMain, (int)(main.GetSetR + 2 * Math.PI * main.GetSetR), main.GetSetR * 2 + distToMain);
 
             }
             if (TrashSlash == 1 || TrashSlash == 2)   // Код варианта б
@@ -233,7 +233,7 @@ namespace Rolling_wheel
         {
             if (TrashSlash == 0)  // Код варианта а, вскоре будет переключатель
             {
-                main.GetSetFi -= 180 / (main.GetSetR * (double)Math.PI) * main.GetSetFiDelta; // Изменение угла поворота
+                main.GetSetFi -= (double)180 / ((double)main.GetSetR * (double)Math.PI); // Изменение угла поворота
                 //main.GetSetFi -= (2 * main.GetSetR * (double)Math.PI) * main.GetSetFiDelta 
                 main.GetSetX++;
                 if (main.GetSetX + main.GetSetR >= Width) { deSecond.GetSetX++; Dots.Add(new Dot(dotNew.GetSetX, dotNew.GetSetY)); }
